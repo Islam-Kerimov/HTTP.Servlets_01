@@ -15,9 +15,7 @@ public class SocketServerRunner {
              DataInputStream inputStream = new DataInputStream(socket.getInputStream());
              Scanner scanner = new Scanner(System.in)) {
 
-            System.out.println("1");
             String request = inputStream.readUTF();
-            System.out.println("2");
             while (!"stop".equals(request)) {
                 System.out.println("Client request: " + request);
                 String response = scanner.nextLine();
